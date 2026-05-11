@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Contact — The Academic Advisory</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..700;1,6..72,200..700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body data-screen-label="06 Contact">
+
+<header class="site-header">
+  <div class="row">
+    <div class="tag">The Academic Advisory · LLC</div>
+    <a class="brand" href="index.html">The Academic Advisory</a>
+    <div class="tag tag-right">San Juan · New York · London</div>
+  </div>
+  <nav class="nav">
+    <a href="index.html">Work</a>
+    <a href="about.html">About</a>
+    <a href="consulting.html">Consulting</a>
+    <a href="management.html">Management</a>
+    <a href="intellectual.html">Licensing</a>
+    <a href="contact.html" class="current">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="meta">
+    <span class="kicker">Index · No. 06</span>
+    <span class="kicker">By Appointment</span>
+  </div>
+  <h1 class="display">A private <em>conversation</em>, to begin.</h1>
+  <div class="sub">
+    <div class="left"><span class="label">Hours of counsel</span> Monday – Friday<br />9:00 – 18:00 AST</div>
+    <div class="right">
+      <p>We work with a small number of families, institutions, and partners at any one time. Please share a few words about who you are and what you are looking for — we respond personally within two business days.</p>
+    </div>
+  </div>
+</section>
+
+<section class="wrap section sm">
+  <div class="two-col">
+    <div>
+      <div class="kicker" style="margin-bottom:18px;">By Correspondence</div>
+      <a href="mailto:Admin@TheAcademicAdvisory.com" class="display" style="font-size: clamp(24px, 2.4vw, 34px); border-bottom: 1px solid var(--ink); display: inline-block; padding-bottom: 6px;">Admin@TheAcademicAdvisory.com</a>
+
+      <div style="margin-top: 56px;">
+        <div class="kicker" style="margin-bottom:14px;">By Post</div>
+        <p style="font-size: 19px; line-height: 1.5; margin: 0; max-width: 32ch;">San Juan,<br />Puerto Rico 00911</p>
+      </div>
+
+      <div style="margin-top: 56px;">
+        <div class="kicker" style="margin-bottom:14px;">On Discretion</div>
+        <p style="color: var(--ink-soft); font-size: 16px; line-height: 1.65; max-width: 40ch; margin: 0;">All inquiries are handled in absolute confidence. We do not disclose client relationships, and references are provided only upon mutual agreement.</p>
+      </div>
+    </div>
+
+    <div>
+      <div class="kicker" style="margin-bottom:18px;">Inquiry Form</div>
+      <form class="inquiry" onsubmit="event.preventDefault(); this.querySelector('.thanks').hidden = false; this.querySelector('button').textContent = 'Sent';">
+        <div class="row2">
+          <div>
+            <label for="fn">First Name</label>
+            <input id="fn" name="fn" type="text" required />
+          </div>
+          <div>
+            <label for="ln">Last Name</label>
+            <input id="ln" name="ln" type="text" required />
+          </div>
+        </div>
+        <div class="row2">
+          <div>
+            <label for="em">Email</label>
+            <input id="em" name="em" type="email" required />
+          </div>
+          <div>
+            <label for="ph">Telephone (optional)</label>
+            <input id="ph" name="ph" type="tel" />
+          </div>
+        </div>
+        <div>
+          <label for="role">I am writing as</label>
+          <select id="role" name="role">
+            <option>A parent or family member</option>
+            <option>A prospective student</option>
+            <option>An institution or school</option>
+            <option>An educational firm seeking management support</option>
+            <option>A potential licensing partner</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div>
+          <label for="practice">Practice of Interest</label>
+          <select id="practice" name="practice">
+            <option>Educational Consulting</option>
+            <option>Management &amp; Operations</option>
+            <option>Intellectual Property &amp; Licensing</option>
+            <option>Undecided — would value your guidance</option>
+          </select>
+        </div>
+        <div>
+          <label for="msg">Your Message</label>
+          <textarea id="msg" name="msg" placeholder="A few sentences about who you are and what you are looking for…" required></textarea>
+        </div>
+        <div class="send-row">
+          <span class="note">We respond personally within two business days.</span>
+          <button class="btn" type="submit">Send Inquiry <span class="arr">→</span></button>
+        </div>
+        <p class="thanks" hidden style="color: var(--accent); font-style: italic; margin: 0;">Thank you — your note has been received. We will be in touch shortly.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer class="site-foot">
+  <div class="top">
+    <div>
+      <div class="brand-foot">The Academic <em>Advisory</em></div>
+      <p class="info">A private consultancy in education — based in San Juan, Puerto Rico, working with families and institutions across the mainland United States and internationally.</p>
+    </div>
+    <div>
+      <h5>Firm</h5>
+      <ul>
+        <li><a href="index.html">Work</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>Practices</h5>
+      <ul>
+        <li><a href="consulting.html">Consulting</a></li>
+        <li><a href="management.html">Management</a></li>
+        <li><a href="intellectual.html">Licensing</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="colophon">
+    <span>© 2025 The Academic Advisory, LLC</span>
+    <span>Admin@TheAcademicAdvisory.com</span>
+    <span>San Juan · Puerto Rico 00911</span>
+  </div>
+</footer>
+
+</body>
+</html>
