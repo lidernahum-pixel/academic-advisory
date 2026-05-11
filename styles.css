@@ -229,11 +229,13 @@ p { text-wrap: pretty; margin: 0 0 1em; }
 /* ---------- Services index (home) ---------- */
 .services {
   border-top: 1px solid var(--line);
+  max-width: 1240px;
+  margin: 0 auto;
 }
 .svc-row {
   display: grid;
-  grid-template-columns: 70px 1.1fr 1.4fr 110px;
-  gap: clamp(20px, 3vw, 40px);
+  grid-template-columns: auto minmax(0, 1.1fr) minmax(0, 1.4fr) auto;
+  column-gap: clamp(14px, 1.6vw, 22px);
   padding: 36px 0;
   border-bottom: 1px solid var(--line);
   align-items: baseline;
@@ -430,11 +432,13 @@ p { text-wrap: pretty; margin: 0 0 1em; }
 /* ---------- Service detail list (subpages) ---------- */
 .svc-detail {
   border-top: 1px solid var(--line);
+  max-width: 1240px;
+  margin: 0 auto;
 }
 .svc-detail .row {
   display: grid;
-  grid-template-columns: 70px 1.1fr 1.6fr;
-  gap: clamp(20px, 3vw, 48px);
+  grid-template-columns: auto minmax(0, 1.1fr) minmax(0, 1.6fr);
+  column-gap: clamp(14px, 1.8vw, 28px);
   padding: 44px 0;
   border-bottom: 1px solid var(--line);
   align-items: start;
