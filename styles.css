@@ -14,7 +14,7 @@
   --serif: "Newsreader", "Source Serif 4", "Iowan Old Style", Georgia, serif;
   --mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
 
-  --gutter: clamp(20px, 5vw, 80px);
+  --gutter: clamp(28px, 7vw, 160px);
 }
 
 * { box-sizing: border-box; }
