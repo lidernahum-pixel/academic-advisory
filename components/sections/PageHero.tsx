@@ -42,11 +42,13 @@ export default function PageHero({
       {/* meta strip */}
       <motion.div
         {...fade(0)}
-        className="flex flex-wrap items-center gap-x-4 md:gap-x-6 gap-y-2 border-b border-[var(--color-line)] pb-3 md:pb-4 mb-[clamp(32px,7vw,100px)]"
+        className="flex flex-wrap items-center gap-y-2 border-b border-[var(--color-line)] pb-3 md:pb-4 mb-[clamp(32px,7vw,100px)]"
       >
-        <span className="kicker text-[10px] md:text-[12px]">{metaLeft}</span>
-        <span aria-hidden className="text-muted">·</span>
-        <span className="kicker text-[10px] md:text-[12px]">{metaRight}</span>
+        <p className="kicker text-[10px] md:text-[12px] m-0">
+          {metaLeft}
+          <span aria-hidden className="text-muted mx-2 md:mx-3">·</span>
+          {metaRight}
+        </p>
         <span className="ml-auto font-mono text-[10px] tracking-[0.18em] uppercase text-muted hidden md:inline">
           Lat. 18°27′N · Long. 66°06′W
         </span>

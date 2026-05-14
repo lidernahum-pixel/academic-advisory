@@ -38,7 +38,7 @@ export default function ServicesIndex({ items }: ServicesIndexProps) {
               <p className="m-0 text-ink-soft text-[17px] leading-[1.55] max-w-[50ch] col-start-2 md:col-start-3 row-start-2 md:row-start-1 mt-3 md:mt-0">
                 {item.body}
               </p>
-              <div className="hidden md:flex text-[13px] text-ink-soft italic items-center justify-end whitespace-nowrap col-start-4 row-start-1">
+              <div className="text-[13px] text-ink-soft italic flex items-center whitespace-nowrap col-start-2 row-start-3 mt-2 md:col-start-4 md:row-start-1 md:mt-0 md:justify-end">
                 Read
                 <span
                   aria-hidden
@@ -46,9 +46,6 @@ export default function ServicesIndex({ items }: ServicesIndexProps) {
                 >
                   →
                 </span>
-              </div>
-              <div className="md:hidden text-[13px] text-ink-soft italic col-start-2 row-start-3 mt-2">
-                Read <span aria-hidden className="ml-1.5">→</span>
               </div>
             </div>
           </Link>

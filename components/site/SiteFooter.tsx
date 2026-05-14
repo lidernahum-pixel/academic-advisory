@@ -78,13 +78,7 @@ export default function SiteFooter() {
               style={{ color: "#f3f1ea" }}
             >
               Quarterly{" "}
-              <em
-                className="italic"
-                style={{ color: "var(--color-warm-gold)", fontVariationSettings: '"opsz" 60' }}
-              >
-                note
-              </em>
-              .
+              <em className="italic" style={{ color: "var(--color-warm-gold)", fontVariationSettings: '"opsz" 60' }}>note</em>.
             </div>
             <p
               className="mt-5 text-[15px] leading-[1.65] max-w-[44ch]"

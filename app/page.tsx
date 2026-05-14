@@ -126,13 +126,7 @@ export default function Home() {
         text={
           <>
             We exist to rethink education at its{" "}
-            <em
-              className="italic"
-              style={{ color: "var(--color-accent)" }}
-            >
-              roots
-            </em>
-            .
+            <em className="italic" style={{ color: "var(--color-accent)" }}>roots</em>.
           </>
         }
         body={[
@@ -155,7 +149,7 @@ export default function Home() {
       <StatusBand
         kicker="Currently"
         status="Accepting families for the 2026–27 cycle."
-        body="Inquiries reviewed personally. Two business days, by post or correspondence."
+        body="Inquiries reviewed personally, with a reply within two business days."
         ctaLabel="Begin Inquiry"
         ctaHref="/contact"
       />

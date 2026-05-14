@@ -13,7 +13,7 @@ interface WordStaggerProps {
 }
 
 function flatten(node: ReactNode): { word: string; isItalic: boolean }[] {
-  const out: { word: string; isItalic: boolean }[] = [];
+  const raw: { word: string; isItalic: boolean }[] = [];
   const walk = (n: ReactNode, italic: boolean) => {
     if (n == null || typeof n === "boolean") return;
     if (typeof n === "string" || typeof n === "number") {
@@ -22,7 +22,7 @@ function flatten(node: ReactNode): { word: string; isItalic: boolean }[] {
         .filter(Boolean)
         .forEach((token) => {
           if (/^\s+$/.test(token)) return;
-          out.push({ word: token, isItalic: italic });
+          raw.push({ word: token, isItalic: italic });
         });
       return;
     }
@@ -41,7 +41,21 @@ function flatten(node: ReactNode): { word: string; isItalic: boolean }[] {
     }
   };
   Children.forEach(node, (c) => walk(c, false));
-  return out;
+
+  // Glue trailing punctuation onto the previous word so we never render
+  // a leading space before a comma, period, etc. Each animated word still
+  // gets its own span — we just don't insert a space between e.g. "roots"
+  // and ".".
+  const merged: { word: string; isItalic: boolean }[] = [];
+  for (const w of raw) {
+    const last = merged[merged.length - 1];
+    if (last && /^[.,!?;:'")\]}]+$/.test(w.word)) {
+      last.word = last.word + w.word;
+    } else {
+      merged.push({ ...w });
+    }
+  }
+  return merged;
 }
 
 export default function WordStagger({
