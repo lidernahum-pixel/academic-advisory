@@ -50,10 +50,10 @@ export default function SiteFooter() {
         padding: "clamp(70px, 10vw, 130px) var(--gutter) 36px",
       }}
     >
-      {/* faint typographic backdrop */}
+      {/* faint typographic backdrop — desktop only */}
       <div
         aria-hidden
-        className="pointer-events-none absolute -bottom-12 -right-8 select-none font-serif italic leading-none text-[clamp(140px,22vw,360px)] opacity-[0.045] whitespace-nowrap"
+        className="pointer-events-none absolute -bottom-12 -right-8 select-none font-serif italic leading-none text-[clamp(140px,22vw,360px)] opacity-[0.045] whitespace-nowrap hidden md:block"
         style={{
           color: "var(--color-warm-gold)",
           fontVariationSettings: '"opsz" 60',
@@ -236,7 +236,7 @@ export default function SiteFooter() {
               style={{ background: "rgba(217,212,197,0.18)" }}
             />
           </div>
-          <div className="grid grid-cols-3 gap-6">
+          <div className="grid grid-cols-3 gap-4 sm:gap-6">
             {JURISDICTIONS.map((j, i) => (
               <motion.div
                 key={j.city}
@@ -246,13 +246,13 @@ export default function SiteFooter() {
                 transition={{ duration: 0.7, delay: 0.05 + i * 0.1 }}
               >
                 <div
-                  className="font-serif italic text-[clamp(20px,2vw,28px)] leading-tight"
+                  className="font-serif italic text-[clamp(17px,2vw,28px)] leading-tight"
                   style={{ color: "#f3f1ea", fontVariationSettings: '"opsz" 36' }}
                 >
                   {j.city}
                 </div>
                 <div
-                  className="font-mono text-[10px] tracking-[0.18em] uppercase mt-1"
+                  className="font-mono text-[9px] sm:text-[10px] tracking-[0.14em] sm:tracking-[0.18em] uppercase mt-1"
                   style={{ color: "rgba(217,212,197,0.55)" }}
                 >
                   {j.region}
@@ -264,18 +264,18 @@ export default function SiteFooter() {
 
         {/* Colophon */}
         <div
-          className="mt-9 flex flex-wrap gap-y-3 gap-x-9 text-[12px] tracking-[0.04em] items-center"
+          className="mt-9 flex flex-wrap gap-y-2 gap-x-5 sm:gap-x-9 text-[11px] sm:text-[12px] tracking-[0.04em] items-center"
           style={{ color: "rgba(217,212,197,0.55)" }}
         >
           <span className="font-mono">© {year} The Academic Advisory, LLC</span>
           <a
             href="mailto:Admin@TheAcademicAdvisory.com"
-            className="font-mono transition-colors hover:text-white"
+            className="font-mono transition-colors hover:text-white break-all"
           >
             Admin@TheAcademicAdvisory.com
           </a>
           <span className="font-mono">San Juan · Puerto Rico 00911</span>
-          <span className="ml-auto font-mono italic" style={{ color: "rgba(217,212,197,0.4)" }}>
+          <span className="sm:ml-auto font-mono italic" style={{ color: "rgba(217,212,197,0.4)" }}>
             MMXXVI
           </span>
         </div>

@@ -33,12 +33,17 @@
     background: var(--color-bg);
     color: var(--color-ink);
     font-family: var(--font-serif);
-    font-size: 18px;
+    font-size: 17px;
     line-height: 1.55;
     font-optical-sizing: auto;
     font-feature-settings: "kern", "liga";
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+  }
+
+  @media (min-width: 768px) {
+    html, body { font-size: 18px; }
   }
 
   img { display: block; max-width: 100%; }

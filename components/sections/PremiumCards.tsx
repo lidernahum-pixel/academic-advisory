@@ -30,7 +30,7 @@ export default function PremiumCards({ cards }: { cards: PremiumCard[] }) {
             href={card.href}
             className="group block relative overflow-hidden"
           >
-            <div className="relative aspect-[3/4] overflow-hidden bg-paper">
+            <div className="relative aspect-[5/6] sm:aspect-[3/4] overflow-hidden bg-paper">
               <Image
                 src={card.image}
                 alt={card.alt}

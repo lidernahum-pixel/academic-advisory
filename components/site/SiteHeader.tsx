@@ -53,7 +53,7 @@ export default function SiteHeader() {
         borderBottom: "1px solid var(--color-line)",
       }}
     >
-      <div className="container-x grid grid-cols-[1fr_auto_1fr] items-center gap-3 md:gap-8 pt-5 md:pt-6">
+      <div className="container-x grid grid-cols-[1fr_auto_1fr] items-center gap-3 md:gap-8 pt-4 md:pt-6">
         <div className="hidden md:flex items-center gap-3 kicker">
           <span className="inline-block h-px w-6 bg-[var(--color-ink-soft)] opacity-40" />
           The Academic Advisory · LLC
@@ -61,11 +61,12 @@ export default function SiteHeader() {
 
         <Link
           href="/"
-          className="group flex items-center gap-3 justify-center"
+          className="group flex items-center gap-2 md:gap-3 justify-center"
           aria-label="The Academic Advisory — Home"
         >
+          <Monogram size={20} className="text-ink md:hidden" />
           <Monogram size={24} className="text-ink hidden md:block" />
-          <span className="font-serif font-normal text-[19px] tracking-[-0.012em] text-ink leading-none whitespace-nowrap">
+          <span className="font-serif font-normal text-[17px] md:text-[19px] tracking-[-0.012em] text-ink leading-none whitespace-nowrap">
             The Academic Advisory
           </span>
         </Link>
@@ -76,7 +77,7 @@ export default function SiteHeader() {
         </div>
       </div>
 
-      <nav className="container-x flex flex-wrap justify-center gap-x-7 md:gap-x-10 gap-y-2 pb-3.5 mt-2">
+      <nav className="container-x flex flex-wrap justify-center gap-x-5 md:gap-x-10 gap-y-1.5 pb-3 mt-2">
         {NAV_ITEMS.map((item) => {
           const active = isCurrent(item.href);
           return (

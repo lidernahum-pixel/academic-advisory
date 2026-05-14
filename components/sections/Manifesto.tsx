@@ -27,7 +27,7 @@ export default function Manifesto({ text, body, link, sidenote }: ManifestoProps
             viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 1, ease: [0.2, 0.6, 0.2, 1] }}
             className="font-serif font-normal leading-[1.25] tracking-[-0.012em] text-ink max-w-[22ch] text-balance"
-            style={{ fontSize: "clamp(26px, 2.8vw, 40px)" }}
+            style={{ fontSize: "clamp(24px, 2.8vw, 40px)" }}
           >
             {text}
           </motion.div>

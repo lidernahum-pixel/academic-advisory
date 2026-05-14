@@ -50,7 +50,7 @@ export default function QuoteBanner({ image, quote, cite }: QuoteBannerProps) {
         >
           <div
             className="font-serif italic leading-[1.2] max-w-[28ch]"
-            style={{ fontSize: "clamp(22px, 2.4vw, 34px)" }}
+            style={{ fontSize: "clamp(20px, 2.4vw, 34px)" }}
           >
             “{quote}”
           </div>

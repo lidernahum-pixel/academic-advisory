@@ -48,9 +48,9 @@ export default function PremiumQuote({ image, quote, cite }: PremiumQuoteProps) 
           transition={{ duration: 1, ease: [0.2, 0.6, 0.2, 1] }}
           className="font-serif italic leading-[0.3]"
           style={{
-            fontSize: "clamp(80px, 9vw, 140px)",
+            fontSize: "clamp(60px, 9vw, 140px)",
             color: "var(--color-warm-gold)",
-            marginBottom: "clamp(40px, 5vw, 70px)",
+            marginBottom: "clamp(28px, 5vw, 70px)",
             opacity: 0.85,
           }}
         >
@@ -63,7 +63,7 @@ export default function PremiumQuote({ image, quote, cite }: PremiumQuoteProps) 
           transition={{ duration: 1.1, delay: 0.15, ease: [0.2, 0.6, 0.2, 1] }}
           className="font-serif italic font-light leading-[1.12] tracking-[-0.02em] m-0 mb-9 text-cream text-balance"
           style={{
-            fontSize: "clamp(32px, 4.6vw, 68px)",
+            fontSize: "clamp(26px, 4.6vw, 68px)",
             fontVariationSettings: '"opsz" 60',
           }}
         >

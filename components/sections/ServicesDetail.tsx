@@ -29,7 +29,7 @@ export default function ServicesDetail({ items }: ServicesDetailProps) {
           </div>
           <h4
             className="font-serif font-normal m-0 leading-[1.05] tracking-[-0.014em]"
-            style={{ fontSize: "clamp(24px, 2.4vw, 34px)" }}
+            style={{ fontSize: "clamp(20px, 2.4vw, 34px)" }}
           >
             {item.title}
           </h4>

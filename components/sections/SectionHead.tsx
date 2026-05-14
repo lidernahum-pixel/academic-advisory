@@ -28,7 +28,7 @@ export default function SectionHead({ index, kicker, title }: SectionHeadProps) 
       </div>
       <h2
         className="font-display max-w-[22ch] m-0"
-        style={{ fontSize: "clamp(40px, 5.6vw, 84px)" }}
+        style={{ fontSize: "clamp(32px, 5.6vw, 84px)" }}
       >
         {title}
       </h2>

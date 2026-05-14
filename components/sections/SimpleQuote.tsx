@@ -21,7 +21,7 @@ export default function SimpleQuote({ quote, cite }: SimpleQuoteProps) {
         viewport={{ once: true, margin: "-80px" }}
         transition={{ duration: 1, ease: [0.2, 0.6, 0.2, 1] }}
         className="font-serif italic font-normal leading-[1.15] tracking-[-0.018em] text-ink m-0 mb-7 max-w-[18ch]"
-        style={{ fontSize: "clamp(32px, 4.4vw, 64px)" }}
+        style={{ fontSize: "clamp(26px, 4.4vw, 64px)" }}
       >
         {quote}
       </motion.blockquote>

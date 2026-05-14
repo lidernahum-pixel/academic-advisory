@@ -35,8 +35,8 @@ export default function PageHero({
     <section
       className="container-x relative"
       style={{
-        paddingTop: "clamp(72px, 9vw, 160px)",
-        paddingBottom: "clamp(48px, 7vw, 110px)",
+        paddingTop: "clamp(48px, 9vw, 160px)",
+        paddingBottom: "clamp(40px, 7vw, 110px)",
       }}
     >
       {/* meta strip */}
@@ -57,8 +57,9 @@ export default function PageHero({
         className="font-display"
         as="h1"
         style={{
-          fontSize: "clamp(48px, 8.4vw, 132px)",
+          fontSize: "clamp(38px, 8vw, 132px)",
           maxWidth: `${titleMaxCh}ch`,
+          letterSpacing: "-0.025em",
         }}
       >
         {title}

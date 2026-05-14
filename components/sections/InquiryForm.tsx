@@ -108,7 +108,7 @@ export default function InquiryForm() {
         />
       </div>
 
-      <div className="flex justify-between items-center gap-4 flex-wrap mt-1.5">
+      <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4 mt-1.5">
         <span className="text-[13px] text-muted italic">
           We respond personally within two business days.
         </span>

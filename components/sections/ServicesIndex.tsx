@@ -31,7 +31,7 @@ export default function ServicesIndex({ items }: ServicesIndexProps) {
               </span>
               <h3
                 className="font-serif font-normal m-0 leading-[1.05] tracking-[-0.018em] col-start-2 row-start-1"
-                style={{ fontSize: "clamp(26px, 2.7vw, 38px)" }}
+                style={{ fontSize: "clamp(22px, 2.7vw, 38px)" }}
               >
                 {item.title}
               </h3>
