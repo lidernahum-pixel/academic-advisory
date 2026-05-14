@@ -42,11 +42,11 @@ export default function PageHero({
       {/* meta strip */}
       <motion.div
         {...fade(0)}
-        className="flex flex-wrap items-center gap-x-6 gap-y-3 border-b border-[var(--color-line)] pb-4 mb-[clamp(40px,7vw,100px)]"
+        className="flex flex-wrap items-center gap-x-4 md:gap-x-6 gap-y-2 border-b border-[var(--color-line)] pb-3 md:pb-4 mb-[clamp(32px,7vw,100px)]"
       >
-        <span className="kicker">{metaLeft}</span>
+        <span className="kicker text-[10px] md:text-[12px]">{metaLeft}</span>
         <span aria-hidden className="text-muted">·</span>
-        <span className="kicker">{metaRight}</span>
+        <span className="kicker text-[10px] md:text-[12px]">{metaRight}</span>
         <span className="ml-auto font-mono text-[10px] tracking-[0.18em] uppercase text-muted hidden md:inline">
           Lat. 18°27′N · Long. 66°06′W
         </span>
@@ -57,9 +57,10 @@ export default function PageHero({
         className="font-display"
         as="h1"
         style={{
-          fontSize: "clamp(38px, 8vw, 132px)",
+          fontSize: "clamp(36px, 9vw, 132px)",
           maxWidth: `${titleMaxCh}ch`,
-          letterSpacing: "-0.025em",
+          letterSpacing: "-0.022em",
+          lineHeight: "1.02",
         }}
       >
         {title}
@@ -83,7 +84,7 @@ export default function PageHero({
           )}
           {subRight && (
             <div
-              className="text-ink-soft text-[18px] leading-[1.6] md:relative"
+              className="text-ink-soft text-[16px] md:text-[18px] leading-[1.6]"
               style={{ maxWidth: "44ch" }}
             >
               {subRight}

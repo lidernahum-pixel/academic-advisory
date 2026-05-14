@@ -22,15 +22,15 @@ export default function StatusBand({
   return (
     <section
       className="container-x"
-      style={{ paddingTop: "clamp(72px,10vw,140px)", paddingBottom: "clamp(72px,10vw,140px)" }}
+      style={{ paddingTop: "clamp(56px,10vw,140px)", paddingBottom: "clamp(56px,10vw,140px)" }}
     >
-      <div className="content-max border-y border-[var(--color-line)]" style={{ padding: "clamp(36px,5vw,72px) 0" }}>
+      <div className="content-max border-y border-[var(--color-line)]" style={{ padding: "clamp(28px,5vw,72px) 0" }}>
         <motion.div
           initial={{ opacity: 0, y: reduced ? 0 : 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.7, ease: [0.2, 0.6, 0.2, 1] }}
-          className="grid grid-cols-1 md:grid-cols-[auto_1fr_auto] items-baseline gap-x-8 gap-y-5"
+          className="grid grid-cols-1 md:grid-cols-[auto_1fr_auto] items-baseline gap-x-6 md:gap-x-8 gap-y-4"
         >
           <div className="flex items-center gap-3">
             <span
@@ -55,8 +55,8 @@ export default function StatusBand({
           </div>
 
           <div
-            className="font-serif font-normal leading-[1.2] tracking-[-0.014em] text-balance"
-            style={{ fontSize: "clamp(22px, 2.4vw, 32px)" }}
+            className="font-serif font-normal leading-[1.25] tracking-[-0.014em] text-balance"
+            style={{ fontSize: "clamp(19px, 2.4vw, 32px)" }}
           >
             <span className="text-ink">{status}</span>{" "}
             <span className="text-ink-soft">— {body}</span>

@@ -19,9 +19,13 @@
 }
 
 :root {
-  --gutter: clamp(24px, 5vw, 96px);
+  --gutter: clamp(28px, 5vw, 96px);
   --content-max: 1160px;
   --container: calc(var(--content-max) + 2 * var(--gutter));
+}
+
+@media (min-width: 480px) {
+  :root { --gutter: clamp(32px, 5vw, 96px); }
 }
 
 @layer base {

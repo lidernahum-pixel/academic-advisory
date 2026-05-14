@@ -17,7 +17,7 @@ export default function Manifesto({ text, body, link, sidenote }: ManifestoProps
   return (
     <section
       className="container-x"
-      style={{ padding: "clamp(80px, 12vw, 180px) var(--gutter)" }}
+      style={{ padding: "clamp(56px, 12vw, 180px) var(--gutter)" }}
     >
       <div className="content-max grid grid-cols-1 md:grid-cols-[minmax(0,1fr)_minmax(0,1.4fr)] gap-10 md:gap-24 items-start">
         <div className="md:sticky md:top-32 flex flex-col gap-10">

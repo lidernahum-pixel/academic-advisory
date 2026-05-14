@@ -77,14 +77,14 @@ export default function SiteHeader() {
         </div>
       </div>
 
-      <nav className="container-x flex flex-wrap justify-center gap-x-5 md:gap-x-10 gap-y-1.5 pb-3 mt-2">
+      <nav className="container-x flex flex-wrap justify-center gap-x-5 md:gap-x-10 gap-y-1 pb-3 md:pb-3.5 mt-2 md:mt-2">
         {NAV_ITEMS.map((item) => {
           const active = isCurrent(item.href);
           return (
             <Link
               key={item.href}
               href={item.href}
-              className="group relative text-[14px] py-1 transition-colors"
+              className="group relative text-[15px] md:text-[14px] py-2 md:py-1 transition-colors"
               style={{ color: active ? "var(--color-ink)" : "var(--color-ink-soft)" }}
             >
               {item.label}

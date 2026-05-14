@@ -65,10 +65,9 @@ const PREMIUM_CARDS = [
 
 const MARQUEE_VALUES = [
   "Est. San Juan",
-  "Sub rosa",
-  "By Appointment",
-  "Counsel for Students, Families & Institutions",
   "Two Decades of Practice",
+  "For Students, Families & Institutions",
+  "Bilingual · English & Spanish",
 ];
 
 export default function Home() {
@@ -114,7 +113,7 @@ export default function Home() {
         ratio="21/9"
       />
 
-      <section className="container-x" style={{ padding: "clamp(80px,11vw,140px) 0" }}>
+      <section className="container-x" style={{ padding: "clamp(56px,11vw,140px) 0" }}>
         <SectionHead
           index="02 /"
           kicker="Practice Areas"
@@ -149,7 +148,7 @@ export default function Home() {
         }
       />
 
-      <section className="container-x" style={{ padding: "clamp(64px,8vw,120px) 0" }}>
+      <section className="container-x" style={{ padding: "clamp(48px,8vw,120px) 0" }}>
         <PremiumCards cards={PREMIUM_CARDS} />
       </section>
 
@@ -171,9 +170,14 @@ export default function Home() {
         marker="Begin"
         heading={
           <>
-            A private conversation,
-            <br />
-            to begin.
+            <span className="block whitespace-nowrap">A private</span>
+            <span className="block whitespace-nowrap">conversation,</span>
+            <span
+              className="block italic whitespace-nowrap"
+              style={{ color: "var(--color-accent)" }}
+            >
+              to begin.
+            </span>
           </>
         }
         body="We work with a small number of families, institutions, and partners at any one time. Inquiries are reviewed personally, and we respond within two business days."

@@ -46,8 +46,8 @@ export default function CtaBlock({
             whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
             viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.85, ease: [0.2, 0.6, 0.2, 1] }}
-            className="font-display max-w-[14ch]"
-            style={{ fontSize: "clamp(32px, 5.6vw, 84px)" }}
+            className="font-display max-w-none md:max-w-[14ch]"
+            style={{ fontSize: "clamp(28px, 5.6vw, 84px)" }}
           >
             {heading}
           </motion.h2>
