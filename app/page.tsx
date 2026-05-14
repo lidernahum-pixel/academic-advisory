@@ -1,65 +1,185 @@
-import Image from "next/image";
+import PageHero from "@/components/sections/PageHero";
+import FeatureFigure from "@/components/sections/FeatureFigure";
+import SectionHead from "@/components/sections/SectionHead";
+import ServicesIndex from "@/components/sections/ServicesIndex";
+import Manifesto from "@/components/sections/Manifesto";
+import PremiumCards from "@/components/sections/PremiumCards";
+import PremiumQuote from "@/components/sections/PremiumQuote";
+import CtaBlock from "@/components/sections/CtaBlock";
+import Marquee from "@/components/sections/Marquee";
+import StatusBand from "@/components/sections/StatusBand";
+import Sidenote from "@/components/editorial/Sidenote";
+
+const HERO_IMAGE = "/images/reading-hall.jpg";
+
+const SERVICES = [
+  {
+    n: "01",
+    title: "Educational Consulting",
+    body: "Admissions strategy, academic mentorship, neurodivergent learning support, and brain-based approaches to growth — for students, families, and institutions.",
+    href: "/consulting",
+  },
+  {
+    n: "02",
+    title: "Management & Operations",
+    body: "Internal operations for educational firms in Puerto Rico and on the mainland — scheduling, bookkeeping, billing, and the steady stewardship of a practice.",
+    href: "/management",
+  },
+  {
+    n: "03",
+    title: "Intellectual Property & Licensing",
+    body: "Proprietary frameworks, developed over years of mentorship, made available to trusted partners through structured licensing agreements.",
+    href: "/licensing",
+  },
+];
+
+const PREMIUM_CARDS = [
+  {
+    index: "01",
+    title: "Educational<br/>Consulting",
+    excerpt:
+      "Admissions strategy, neurodivergent support, and parent advising — composed engagement by engagement.",
+    href: "/consulting",
+    image: "/images/study-warm-light.jpg",
+    alt: "A study under warm light",
+  },
+  {
+    index: "02",
+    title: "Management<br/>& Operations",
+    excerpt:
+      "Steady stewardship of educational firms — scheduling, billing, and the small details that compound.",
+    href: "/management",
+    image: "/images/archival-desk.jpg",
+    alt: "An archival desk with documents",
+  },
+  {
+    index: "03",
+    title: "Intellectual Property<br/>& Licensing",
+    excerpt:
+      "Frameworks refined over decades, entrusted to trusted partners under structured licensing agreements.",
+    href: "/licensing",
+    image: "/images/bound-books.jpg",
+    alt: "A shelf of bound books",
+  },
+];
+
+const MARQUEE_VALUES = [
+  "Est. San Juan",
+  "Sub rosa",
+  "By Appointment",
+  "Counsel for Students, Families & Institutions",
+  "Two Decades of Practice",
+];
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <>
+      <PageHero
+        metaLeft="Educational Counsel"
+        metaRight="Est. Puerto Rico"
+        title={
+          <>
+            Rethinking education at its <em>roots</em>.
+          </>
+        }
+        subLeftLabel="Founded by"
+        subLeft={
+          <>
+            <span className="font-serif text-[20px] tracking-[-0.012em] block">
+              Elisabeth Gray
+            </span>
+            <span className="text-muted text-[13px] mt-1 block tracking-[0.02em]">
+              Oxford · two decades of practice
+            </span>
+          </>
+        }
+        subRight={
+          <p className="m-0">
+            The Academic Advisory exists to rethink education at its roots —
+            supporting learners, families, and organizations with strategic
+            insight, intellectual rigor, and deep compassion. We guide
+            individuals and institutions toward meaningful growth through
+            mentorship, neurodivergent support, and educational innovation.
           </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+        }
+      />
+
+      <Marquee items={MARQUEE_VALUES} duration={70} />
+
+      <FeatureFigure
+        src={HERO_IMAGE}
+        alt="A neoclassical reading hall, light through high windows"
+        caption="A reading hall — for the long view of an academic life."
+        credit="Photography · Kitera Dent"
+        ratio="21/9"
+      />
+
+      <section className="container-x" style={{ padding: "clamp(80px,11vw,140px) 0" }}>
+        <SectionHead
+          index="02 /"
+          kicker="Practice Areas"
+          title="Three considered ways we work."
+        />
+        <ServicesIndex items={SERVICES} />
+      </section>
+
+      <Manifesto
+        text={
+          <>
+            We exist to rethink education at its{" "}
+            <em
+              className="italic"
+              style={{ color: "var(--color-accent)" }}
+            >
+              roots
+            </em>
+            .
+          </>
+        }
+        body={[
+          "Our work is grounded in the belief that education is not merely about achievement — it is about unlocking potential. We support learners, families, and educational organizations with strategic insight, intellectual rigor, and deep compassion.",
+          "Every engagement is private, considered, and built to last beyond a single application, milestone, or year.",
+        ]}
+        link={{ href: "/about", label: "Read about the firm" }}
+        sidenote={
+          <Sidenote marker="§ 01" label="On Discretion">
+            Every relationship is private. We do not disclose clients, and
+            references are shared only with mutual agreement.
+          </Sidenote>
+        }
+      />
+
+      <section className="container-x" style={{ padding: "clamp(64px,8vw,120px) 0" }}>
+        <PremiumCards cards={PREMIUM_CARDS} />
+      </section>
+
+      <StatusBand
+        kicker="Currently"
+        status="Accepting families for the 2026–27 cycle."
+        body="Inquiries reviewed personally. Two business days, by post or correspondence."
+        ctaLabel="Begin Inquiry"
+        ctaHref="/contact"
+      />
+
+      <PremiumQuote
+        image={HERO_IMAGE}
+        quote="Education is the kindling of a flame, not the filling of a vessel."
+        cite="Socrates"
+      />
+
+      <CtaBlock
+        marker="Begin"
+        heading={
+          <>
+            A private conversation,
+            <br />
+            to begin.
+          </>
+        }
+        body="We work with a small number of families, institutions, and partners at any one time. Inquiries are reviewed personally, and we respond within two business days."
+        ctaLabel="Request a Consultation"
+        ctaHref="/contact"
+      />
+    </>
   );
 }
